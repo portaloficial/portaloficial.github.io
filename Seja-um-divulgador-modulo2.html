@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Seja um divulgador Módulo 2</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background-color: #000;
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 20px;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 10px;
+      position: relative;
+    }
+
+    .step {
+      display: none;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    .step.active {
+      display: block;
+    }
+
+    .step img {
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+      margin: 20px auto;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
+    }
+
+    h2 {
+      font-size: 1.7em;
+      margin: 15px 0;
+      color: #00ffe0;
+      text-shadow: 0 0 5px #00ffcc66;
+    }
+
+    p {
+      color: #ccc;
+      font-size: 1em;
+      line-height: 1.5;
+      margin: 10px 0;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    button {
+      flex: 1;
+      background-color: #00ffcc;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 12px;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1em;
+      box-shadow: 0 4px 10px rgba(0, 255, 204, 0.2);
+    }
+
+    button:hover {
+      background-color: #00d2a6;
+      transform: translateY(-2px);
+    }
+
+    .progress {
+      margin-top: 10px;
+      color: #aaa;
+      font-size: 0.9em;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 500px) {
+      h2 {
+        font-size: 1.4em;
+      }
+
+      button {
+        font-size: 0.95em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="particles-js"></div>
+
+  <div class="container">
+    <!-- Passo 1 -->
+    <div class="step active">
+      <h2>Entenda um pouco sobre o painel</h2>
+      <p>Em total de registro são o total de pessoas que criaram conta através do seu link.</p>
+      <img src="https://i.ibb.co/vn70KHY/20250503-201604.jpg" alt="Painel de registro">
+      <div class="progress">Passo 1 de 7</div>
+      <div class="nav-buttons">
+        <button onclick="window.location.href='seja-1-divulgador.html'">Voltar</button>
+        <button onclick="nextStep()">Próximo</button>
+      </div>
+    </div>
+
+    <!-- Passo 2 -->
+    <div class="step">
+      <h2>Separação dos registros</h2>
+      <p>Total de indicação não validada são aqueles que criaram conta através do seu link, porém não fizeram depósito na casa de aposta ou depositaram menos de R$30.</p>
+      <p>Já a indicação validada são aqueles que depositaram R$30 ou mais.</p>
+      <img src="https://i.ibb.co/vCgcjfMB/20250503-201739.jpg" alt="Indicações validadas e não validadas">
+      <div class="progress">Passo 2 de 7</div>
+      <div class="nav-buttons">
+        <button onclick="prevStep()">Voltar</button>
+        <button onclick="nextStep()">Próximo</button>
+      </div>
+    </div>
+
+    <!-- Passo 3 -->
+    <div class="step">
+      <h2>A parte boa, comissão</h2>
+      <p>Comissão por CPA é a comissão que você gera por cada indicação validada. Atualmente, é paga por CPA negativo: a cada pessoa que você indicou e que depositou R$30 ou mais, você ganha R$50.</p>
+      <img src="https://i.ibb.co/jkfCyd4Y/Screenshot-20250503-201239-Chrome.jpg" alt="Comissão CPA">
+      <div class="progress">Passo 3 de 7</div>
+      <div class="nav-buttons">
+        <button onclick="prevStep()">Voltar</button>
+        <button onclick="nextStep()">Próximo</button>
+      </div>
+    </div>
+
+    <!-- Passo 4 -->
+    <div class="step">
+      <h2>Comissão por REV</h2>
+      <p>A comissão por REV é uma porcentagem do valor que o jogador perder na casa de aposta. Por exemplo, se sua taxa de REV for 30% e o jogador perder R$100, você ganha R$30.</p>
+      <p>Quanto mais os indicados jogarem e perderem, maior será sua comissão proporcional ao REV.</p>
+      <img src="https://i.ibb.co/jkfCyd4Y/Screenshot-20250503-201239-Chrome.jpg" alt="Comissão REV">
+      <div class="progress">Passo 4 de 7</div>
+      <div class="nav-buttons">
+        <button onclick="prevStep()">Voltar</button>
+        <button onclick="nextStep()">Próximo</button>
+      </div>
+    </div>
+
+    <!-- Passo 5 -->
+    <div class="step">
+      <h2>Agora sobre os pagamentos</h2>
+      <p>Os pagamentos são semanais, realizados toda Quarta ou Quinta-feira.</p>
+      <p>Valores acima de R$300 são enviados via PIX para o CPF cadastrado na sua conta.</p>
+      <img src="https://i.ibb.co/NgYMW3Nm/Screenshot-20250503-230938-Chrome.jpg" alt="Pagamento acima de 300">
+      <div class="progress">Passo 5 de 7</div>
+      <div class="nav-buttons">
+        <button onclick="prevStep()">Voltar</button>
+        <button onclick="nextStep()">Próximo</button>
+      </div>
+    </div>
+
+    <!-- Passo 6 -->
+    <div class="step">
+      <h2>Pagamentos</h2>
+      <p>Se você tiver um valor para receber abaixo de R$300 na semana, ele será convertido em pontos dentro da plataforma. Depois, é só trocar os pontos por saldo real e sacar normalmente.</p>
+      <img src="https://i.ibb.co/NgX20cQQ/Screenshot-20250503-231824-Chrome.jpg" alt="Pagamento em pontos">
+      <div class="progress">Passo 6 de 7</div>
+      <div class="nav-buttons">
+        <button onclick="prevStep()">Voltar</button>
+        <button onclick="nextStep()">Próximo</button>
+      </div>
+    </div>
+
+    <!-- Passo 7 -->
+    <div class="step">
+      <h2>Parabéns por chegar até aqui!</h2>
+      <p>Se você quer entrar nessa jornada e ainda não tem uma conta, clique no botão abaixo e crie sua conta de sucesso. Boa sorte na sua caminhada!</p>
+      <button onclick="window.location.href='seja-um-divulgador.html'">Criar conta agora</button>
+      <p style="margin-top:20px;">Se precisar de conteúdo, pode utilizar os abaixo:</p>
+      <button onclick="window.location.href='conteudo.html'">Conteúdo</button>
+      <div class="progress">Passo 7 de 7</div>
+      <div class="nav-buttons">
+        <button onclick="prevStep()">Voltar</button>
+        <span></span>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 50, density: { enable: true, value_area: 800 } },
+        color: { value: "#00ffcc" },
+        shape: { type: "circle" },
+        opacity: { value: 0.3, random: true },
+        size: { value: 3, random: true },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#00ffcc",
+          opacity: 0.25,
+          width: 1
+        },
+        move: { enable: true, speed: 1.5 }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "grab" },
+          onclick: { enable: true, mode: "push" }
+        },
+        modes: {
+          grab: { distance: 140, line_linked: { opacity: 0.5 } },
+          push: { particles_nb: 4 }
+        }
+      },
+      retina_detect: true
+    });
+
+    let current = 0;
+    const steps = document.querySelectorAll('.step');
+
+    function showStep(index) {
+      steps.forEach((step, i) => {
+        step.classList.toggle('active', i === index);
+      });
+    }
+
+    function nextStep() {
+      if (current < steps.length - 1) {
+        current++;
+        showStep(current);
+      }
+    }
+
+    function prevStep() {
+      if (current > 0) {
+        current--;
+        showStep(current);
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Conteúdo para Download</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      color: #00ffe0;
+      margin-bottom: 30px;
+      text-shadow: 0 0 5px #00ffcc66;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .card {
+      background-color: #111;
+      padding: 10px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 255, 204, 0.2);
+      border: 2px solid #00ffcc;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      max-height: 300px;
+    }
+
+    .download-btn {
+      margin-top: 10px;
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #00ffcc;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background-color: #00d2a6;
+    }
+
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .particles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(0,255,204,0.1) 1px, transparent 1px);
+      background-size: 40px 40px;
+      animation: move 10s linear infinite;
+    }
+
+    @keyframes move {
+      0% { background-position: 0 0; }
+      100% { background-position: 40px 40px; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="background">
+    <div class="particles"></div>
+  </div>
+
+  <h1>Conteúdo para Download</h1>
+
+  <div class="grid">
+    <div class="card">
+      <img src="https://i.ibb.co/8Lmz98Nx/Screenshot-2024-12-28-11-22-08-440-com-1.png" alt="">
+      <a class="download-btn" href="https://i.ibb.co/8Lmz98Nx/Screenshot-2024-12-28-11-22-08-440-com-1.png" download>Baixar imagem</a>
+    </div>
+    <div class="card">
+      <img src="https://i.ibb.co/GffVwF7H/d4a0a5d0-f009-4a21-888f-4e4fa61d3a70-1.png" alt=""/>
+      <a class="download-btn" href="https://i.ibb.co/GffVwF7H/d4a0a5d0-f009-4a21-888f-4e4fa61d3a70-1.png" download>Baixar imagem</a>
+    </div>
+    <div class="card">
+      <img src="https://i.ibb.co/DgCwf1M1/97a3835f-8fd2-4266-b9dd-3a926a3b7160-1.png" alt=""/>
+      <a class="download-btn" href="https://i.ibb.co/DgCwf1M1/97a3835f-8fd2-4266-b9dd-3a926a3b7160-1.png" download>Baixar imagem</a>
+    </div>
+    <div class="card">
+      <img src="https://i.ibb.co/9HnMrfs0/Screenshot-20250111-051938-Chrome.png" alt=""/>
+      <a class="download-btn" href="https://i.ibb.co/9HnMrfs0/Screenshot-20250111-051938-Chrome.png" download>Baixar imagem</a>
+    </div>
+    <div class="card">
+      <img src="https://i.ibb.co/VpmHLWH8/Screenshot-20250111-051909-Chrome.png" alt=""/>
+      <a class="download-btn" href="https://i.ibb.co/VpmHLWH8/Screenshot-20250111-051909-Chrome.png" download>Baixar imagem</a>
+    </div>
+    <div class="card">
+      <img src="https://i.ibb.co/Y74bXsSJ/Screenshot-20250111-060838-Chrome.png" alt=""/>
+      <a class="download-btn" href="https://i.ibb.co/Y74bXsSJ/Screenshot-20250111-060838-Chrome.png" download>Baixar imagem</a>
+    </div>
+    <div class="card">
+      <img src="https://i.ibb.co/fYynL7ps/IMG-20241224-WA0004-1.png" alt=""/>
+      <a class="download-btn" href="https://i.ibb.co/fYynL7ps/IMG-20241224-WA0004-1.png" download>Baixar imagem</a>
+    </div>
+    <div class="card">
+      <img src="https://i.ibb.co/W4yCC8HR/IMG-20241224-WA0003-1.png" alt=""/>
+      <a class="download-btn" href="https://i.ibb.co/W4yCC8HR/IMG-20241224-WA0003-1.png" download>Baixar imagem</a>
+    </div>
+    <div class="card">
+      <img src="https://i.ibb.co/39zMqXyR/02-EDF10-F-F516-4-F9-E-8306-49-D766494178.png" alt=""/>
+      <a class="download-btn" href="https://i.ibb.co/39zMqXyR/02-EDF10-F-F516-4-F9-E-8306-49-D766494178.png" download>Baixar imagem</a>
+    </div>
+    <div class="card">
+      <img src="https://i.ibb.co/twFxkGfh/Screenshot-20241206-231329-Chrome.jpg" alt=""/>
+      <a class="download-btn" href="https://i.ibb.co/twFxkGfh/Screenshot-20241206-231329-Chrome.jpg" download>Baixar imagem</a>
+    </div>
+    <div class="card">
+      <img src="https://i.ibb.co/jP5zFN3V/Screenshot-2024-12-22-00-33-59-607-com-android-chrome.jpg" alt=""/>
+      <a class="download-btn" href="https://i.ibb.co/jP5zFN3V/Screenshot-2024-12-22-00-33-59-607-com-android-chrome.jpg" download>Baixar imagem</a>
+    </div>
+    <div class="card">
+      <img src="https://i.ibb.co/4wm3BH6x/Screenshot-20250111-060822-Chrome.png" alt=""/>
+      <a class="download-btn" href="https://i.ibb.co/4wm3BH6x/Screenshot-20250111-060822-Chrome.png" download>Baixar imagem</a>
+    </div>
+    <div class="card">
+      <img src="https://i.ibb.co/4wm3BH6x/Screenshot-20250111-060822-Chrome.png" alt=""/>
+      <a class="download-btn" href="https://i.ibb.co/4wm3BH6x/Screenshot-20250111-060822-Chrome.png" download>Baixar imagem</a>
+    </div>
+    <div class="card">
+      <img src="https://i.ibb.co/C5fM2hKK/IMG-20241227-221619-613-1.png" alt=""/>
+      <a class="download-btn" href="https://i.ibb.co/C5fM2hKK/IMG-20241227-221619-613-1.png" download>Baixar imagem</a>
+    </div>
+    <div class="card">
+      <img src="https://i.ibb.co/1fCv20XK/IMG-0435.jpg" alt=""/>
+      <a class="download-btn" href="https://i.ibb.co/1fCv20XK/IMG-0435.jpg" download>Baixar imagem</a>
+    </div>
+    <div class="card">
+      <img src="https://i.ibb.co/zhtmbsWm/Screenshot-20241223-095840-Chrome.jpg" alt=""/>
+      <a class="download-btn" href="https://i.ibb.co/zhtmbsWm/Screenshot-20241223-095840-Chrome.jpg" download>Baixar imagem</a>
+    </div>
+    <div class="card">
+      <img src="https://i.ibb.co/3yB19qFz/Screenshot-2024-12-22-10-37-55-324-com-whatsapp.jpg" alt=""/>
+      <a class="download-btn" href="https://i.ibb.co/3yB19qFz/Screenshot-2024-12-22-10-37-55-324-com-whatsapp.jpg" download>Baixar imagem</a>
+    </div>
+    <div class="card">
+      <img src="https://i.ibb.co/vxqkQHZC/IMG-20250323-002223.webp" alt=""/>
+      <a class="download-btn" href="https://i.ibb.co/vxqkQHZC/IMG-20250323-002223.webp" download>Baixar imagem</a>
+    </div>
+  </div>
+
+  <a href="seja-1-divulgador.html" style="display:inline-block;margin-top:40px;padding:12px 30px;background-color:#00ffcc;color:#000;font-weight:bold;border-radius:10px;text-decoration:none;transition:background-color 0.3s ease;">← Voltar</a>
+
+</body>
+</html>
