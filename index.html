@@ -20,14 +20,21 @@
       color: white;
       text-align: center;
       background-color: transparent;
-      overflow: hidden; /* remove barra de rolagem */
+      overflow: hidden; /* Padrão: sem rolagem */
+    }
+
+    /* --- PC (min-width 768px) --- */
+    @media (min-width: 768px) {
+      body {
+        overflow-y: auto; /* só no PC vai aparecer rolagem vertical */
+      }
     }
 
     .container {
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start; /* sobe tudo para cima */
+      justify-content: flex-start;
       align-items: center;
       padding: 30px 20px;
     }
@@ -40,10 +47,26 @@
       margin: 10px 0;
     }
 
-    p {
+    p.subtitle {
       font-size: 18px;
       margin: 0 0 20px;
       color: #fff;
+      text-shadow: 0 0 8px #00ffff;
+    }
+
+    p.blue-neon {
+      font-size: 18px;
+      margin: 15px 0 20px;
+      color: #00cfff;
+      font-weight: bold;
+      text-shadow: 0 0 10px #00cfff, 0 0 20px #00cfff;
+    }
+
+    p.section-title {
+      font-size: 18px;
+      margin: 30px 0 15px;
+      color: #fff;
+      font-weight: bold;
       text-shadow: 0 0 8px #00ffff;
     }
 
@@ -53,7 +76,7 @@
       justify-content: flex-start;
       background-color: #001f3f;
       border-radius: 30px;
-      margin: 10px auto;
+      margin: 5px auto;
       width: 90%;
       max-width: 400px;
       padding: 12px 16px;
@@ -90,15 +113,53 @@
       100% { left: 125%; }
     }
 
-    .botao:hover {
-      transform: scale(1.03);
-    }
+    .botao:hover { transform: scale(1.03); }
 
     @media (hover: none) {
-      .botao:active {
-        transform: scale(0.97);
-        background-color: #002b5c;
-      }
+      .botao:active { transform: scale(0.97); background-color: #002b5c; }
+    }
+
+    /* Barra de imagens rolando */
+    .scroll-container {
+      display: flex;
+      overflow-x: auto;
+      gap: 10px;
+      padding: 10px 0;
+      width: 100%;
+      max-width: 800px;
+      scroll-behavior: smooth;
+    }
+
+    .scroll-container::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .scroll-container::-webkit-scrollbar-thumb {
+      background-color: #00cfff;
+      border-radius: 4px;
+    }
+
+    .image-button {
+      flex: 0 0 auto;
+      width: 150px;
+      height: 150px;
+      border-radius: 15px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .image-button img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .image-button:hover { transform: scale(1.05); }
+
+    @media (max-width: 600px) {
+      .botao { font-size: 14px; padding: 10px 12px; }
+      .image-button { width: 120px; height: 120px; }
     }
   </style>
 </head>
@@ -108,7 +169,7 @@
 
   <div class="container">
     <h1>🔥 As melhores plataformas estão aqui 😁</h1>
-    <p>🤩 Entre no grupo para receber sinais de bônus exclusivo 🤩</p>
+    <p class="subtitle">🤩 Cadastre-se e comece a jogar 🤩</p>
 
     <a class="botao" href="http://short.up.bet.br/AAAEx" target="_blank">
       <img src="https://i.ibb.co/RpD1sdvG/Design-sem-nome-7.png" alt="Plataforma 1">
@@ -120,15 +181,39 @@
       <span>Plataforma 2 👈</span>
     </a>
 
-    <a class="botao" href="sala-de-sinais.html" target="_blank">
-      <img src="https://t.ctcdn.com.br/uDDFcLn5kQZ6Y7dn0OfB2NtsE-Q=/i621673.jpeg" alt="Plataforma 3">
-      <span>Receber sinais de bônus 👈</span>
-    </a>
+    <!-- Frase azul neon -->
+    <p class="blue-neon">R$5,00, você consegue girar 50 vezes</p>
 
-    <a class="botao" href="seja-1-divulgador.html" target="_blank">
-      <img src="https://img.freepik.com/vetores-premium/desenho-de-streetwear-money-angel_96628-541.jpg?w=360" alt="Afiliado">
-      <span>Ganhe dinheiro divulgando 👈</span>
-    </a>
+    <!-- Barra de imagens rolando -->
+    <div class="scroll-container">
+      <a class="image-button" href="http://short.up.bet.br/AAAEx" target="_blank"><img src="https://i.imgur.com/Cp0mQPU.png"></a>
+      <a class="image-button" href="http://short.up.bet.br/AAAEx" target="_blank"><img src="https://i.imgur.com/58Ghntm.png"></a>
+      <a class="image-button" href="http://short.up.bet.br/AAAEx" target="_blank"><img src="https://i.imgur.com/9J8QatL.png"></a>
+      <a class="image-button" href="http://short.up.bet.br/AAAEx" target="_blank"><img src="https://i.imgur.com/835VG3w.png"></a>
+      <a class="image-button" href="http://short.up.bet.br/AAAEx" target="_blank"><img src="https://i.imgur.com/pu1Vvue.png"></a>
+      <a class="image-button" href="http://short.up.bet.br/AAAEx" target="_blank"><img src="https://i.imgur.com/TUAdO9Q.png"></a>
+      <a class="image-button" href="http://short.up.bet.br/AAAEx" target="_blank"><img src="https://i.imgur.com/8b6tEUA.png"></a>
+      <a class="image-button" href="http://short.up.bet.br/AAAEx" target="_blank"><img src="https://i.imgur.com/OEIuXUJ.png"></a>
+      <a class="image-button" href="http://short.up.bet.br/AAAEx" target="_blank"><img src="https://i.imgur.com/4BJ7ia8.png"></a>
+      <a class="image-button" href="http://short.up.bet.br/AAAEx" target="_blank"><img src="https://i.imgur.com/LZLZXT6.png"></a>
+      <a class="image-button" href="http://short.up.bet.br/AAAEx" target="_blank"><img src="https://i.imgur.com/HTRiT5c.png"></a>
+    </div>
+
+    <!-- Nova seção: Os mais jogados -->
+    <p class="blue-neon">Os mais jogados</p>
+    <div class="scroll-container">
+      <a class="image-button" href="http://short.up.bet.br/AAAEx" target="_blank"><img src="https://i.imgur.com/onE7kSs.png"></a>
+      <a class="image-button" href="http://short.up.bet.br/AAAEx" target="_blank"><img src="https://i.imgur.com/byF39RG.png"></a>
+      <a class="image-button" href="http://short.up.bet.br/AAAEx" target="_blank"><img src="https://i.imgur.com/d6Haor9.png"></a>
+      <a class="image-button" href="http://short.up.bet.br/AAAEx" target="_blank"><img src="https://i.imgur.com/mw2n3Dd.png"></a>
+      <a class="image-button" href="http://short.up.bet.br/AAAEx" target="_blank"><img src="https://i.imgur.com/39xgnTq.png"></a>
+      <a class="image-button" href="http://short.up.bet.br/AAAEx" target="_blank"><img src="https://i.imgur.com/4dDpWbm.png"></a>
+      <a class="image-button" href="http://short.up.bet.br/AAAEx" target="_blank"><img src="https://i.imgur.com/uZWEny2.png"></a>
+      <a class="image-button" href="http://short.up.bet.br/AAAEx" target="_blank"><img src="https://i.imgur.com/9HpVDts.png"></a>
+      <a class="image-button" href="http://short.up.bet.br/AAAEx" target="_blank"><img src="https://i.imgur.com/kZLG5FR.png"></a>
+      <a class="image-button" href="http://short.up.bet.br/AAAEx" target="_blank"><img src="https://i.imgur.com/w3V4APr.png"></a>
+      <a class="image-button" href="http://short.up.bet.br/AAAEx" target="_blank"><img src="https://i.imgur.com/z0ERlgi.png"></a>
+    </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
